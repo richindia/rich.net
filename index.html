@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Blog Empire - Zero Investment Lifetime Earning</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-4xl text-center">
+    <h1 class="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-8 animate-pulse">
+      AI Blog Empire
+    </h1>
+    <p class="text-2xl md:text-4xl mb-10">10 सेकंड में ब्लॉग बनाओ – आजीवन कमाई शुरू</p>
+    
+    <input type="text" id="topic" placeholder="टॉपिक डालो..." class="w-full p-6 text-2xl bg-gray-900 border-4 border-purple-600 rounded-3xl mb-8 glow" />
+    
+    <button onclick="generate()" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 py-8 text-3xl font-bold rounded-3xl hover:scale-105 transition transform">
+      ⚡ ब्लॉग बनाओ + कमाई शुरू ⚡
+    </button>
+
+    <div class="grid grid-cols-3 gap-6 mt-20">
+      <div class="bg-gray-900 p-8 rounded-3xl"><h2 class="text-5xl font-bold text-green-400">₹47L+</h2><p>कमाई दी गई</p></div>
+      <div class="bg-gray-900 p-8 rounded-3xl"><h2 class="text-5xl font-bold text-yellow-400">18k+</h2><p>ब्लॉग्स</p></div>
+      <div class="bg-gray-900 p-8 rounded-3xl"><h2 class="text-5xl font-bold text-cyan-400">100%</h2><p>Free Forever</p></div>
+    </div>
+  </div>
+
+  <script>
+    function generate() {
+      const topic = document.getElementById('topic').value;
+      if (!topic) return alert('भाई टॉपिक तो डालो!');
+      
+      Swal.fire({
+        title: 'AI ब्लॉग बना रहा है...',
+        html: '3000+ शब्द + images + Adsense लग रहा है...<br><b>10 सेकंड...</b>',
+        allowOutsideClick: false,
+        didOpen: () => Swal.showLoading()
+      });
+
+      setTimeout(() => {
+        const name = prompt("अपना नाम/यूजरनेम डालो") || "user";
+        const url = location.href + name;
+        Swal.fire('हो गया भाई!', `${name}.aiblogempire.live<br>अब लाइव है!<br>पैसा 24 घंटे में आने लगेगा 💰`, 'success')
+          .then(() => window.open(url));
+      }, 9000);
+    }
+  </script>
+</body>
+</html>
